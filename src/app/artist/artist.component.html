@@ -1,0 +1,44 @@
+<section class="p-2">
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col">
+            <div class="card mb-3 ">
+                <div class="card-header  text-white"style="background-color:rgb(10, 10, 10);">
+                    <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4 ">
+<img [src]="artist.images[0].url"class="img-fluid img-thumbnail" alt="">
+                        </div>
+                        <div class="col-sm-8">
+<h3 class="display-3">{{artist.name}}</h3>
+<p class="h3">Genres:
+    <span class="badge badge-dark mr-2" *ngFor="let genre of artist.genres">{{genre}}</span>
+</p>
+<p class="h3">Followers:{{artist.followers.total | number}}</p>
+</div>
+</div>
+</div>
+</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3   ">
+                        <div class="col " *ngFor="let album of albums">
+                            <div class="card h-100   "style="background-color:black;">
+
+                                <div class="card-body text-dark text-center">
+                                    <img [src]="album.images[0].url"class="img-fluid img-thumbnail"height="200px" alt="">
+                                    <h5 class=" p-3 text-white">{{album.name}}</h5>
+
+                                </div>
+                                  <div class="card-footer">
+                                    <a routerLink="/albums/{{album.id}}" class="btn btn-outline-light d-block mx-auto ">Play</a>
+                                  </div>
+                                  
+                            </div>
+                        </div>
+                    </div>
+
+
+</section>

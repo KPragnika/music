@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="display display-3 text-white text-center p-5">Music </div>
+  <h3 class="text-white text-center p-2">Stream your favourite music here</h3>
+<form >
+    <div class="form-group">
+<span><input type="search" name="search"class="form-control" placeholder="Search for an artist" [(ngModel)]="searchQuery"(keyup)="searchArtists()" >
+</span>
+</div>
+</form>
+
+<!--<div class="row  row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+  <div class="col">
+  <div class="card  h-75 mt-5" >
+      <div class="card-body ">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTUxMzU2MTk1OF5BMl5BanBnXkFtZTgwNzg4NjAwMzI@._V1_.jpg" height="400px"width="100%" alt="">
+      <h3>Harry Styles</h3>
+        </div>
+      <div class="card-footer d-block mx-auto">
+<button class="btn btn-outline-dark ">View</button>
+</div>
+</div>
+</div>
+
+<div class="col">
+  <div class="card  h-75 mt-5" >
+      <div class="card-body ">
+          <img src="https://api.time.com/wp-content/uploads/2019/04/taylor-swift-time-100-2019-082.jpg?quality=85&zoom=2" height="400px"width="100%" alt="">
+          <h3>Taylor Swift</h3>
+
+        </div>
+      <div class="card-footer d-block mx-auto">
+<button class="btn btn-outline-dark " >View</button>
+</div>
+</div>
+</div>
+
+<div class="col">
+  <div class="card  h-75 mt-5" >
+      <div class="card-body ">
+          <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ed562613dbc9800060b280b%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D0%26cropX2%3D1080%26cropY1%3D0%26cropY2%3D1080" height="400px"width="100%" alt="">
+          <h3>Ariana Grande</h3>
+
+        </div>
+      <div class="card-footer d-block mx-auto">
+<button class="btn btn-outline-dark " >View</button>
+</div>
+</div>
+</div>
+
+<div class="col">
+  <div class="card  h-75 mt-5" >
+      <div class="card-body ">
+          <img src="https://www.bookmysinger.com/wp-content/uploads/2018/02/SHREYA_GHOSHAL1_jpg_887f-480x600_t.jpg" height="400px"width="100%" alt="">
+          <h3>Shreya Ghoshal</h3>
+
+        </div>
+      <div class="card-footer d-block mx-auto">
+<button class="btn btn-outline-dark " >View</button>
+</div>
+</div>
+</div>
+
+<div class="col">
+  <div class="card  h-75 mt-5" >
+      <div class="card-body ">
+          <img src="https://i.pinimg.com/736x/dd/d1/e4/ddd1e499a601d0b942ba81130daae7e1.jpg" height="400px"width="100%" alt="">
+          <h3>Arijit Singh</h3>
+
+        </div>
+      <div class="card-footer d-block mx-auto">
+<button class="btn btn-outline-dark " >View</button>
+</div>
+</div>
+</div>
+
+<div class="col">
+  <div class="card  h-75 mt-5" >
+      <div class="card-body ">
+          <img src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/a_r_rahman_38.jpg" height="400px"width="100%" alt="">
+          <h3>AR Rahman</h3>
+
+        </div>
+      <div class="card-footer d-block mx-auto">
+<button class="btn btn-outline-dark " >View</button>
+</div>
+</div>
+</div>
+
+
+</div>-->
+
+<div class="container ">
+  <div class="card w-100 m-5  "style="max-width:100%;
+                                      background-color:black;
+                                      box-shadow:0 8px 17px 0 rgba(0,0,0,0.2);" >
+  <div class="row m-3" *ngFor="let artist of artists">
+    <div class="col-md-4">
+  
+              <img [src]="artist.images[0].url"routerLink="/artists/{{artist.id}}" class="img mt-5" height="300px" width="100%"alt="">
+</div>
+<div class="col-md-8">
+              <div class="card-body">
+                  <h2 class="text-light">{{artist.name}}</h2>
+   <p class="text-light">Followers: {{artist.followers.total | number}}</p>
+           <p class="text-light"*ngFor="let genre of artist.genres">Genres:  {{genre}}</p>
+    </div>
+            </div>
+
+    </div>
+  </div>
+  </div>
+
+                                            
+</div>
+
+
+ 
+    
+                        

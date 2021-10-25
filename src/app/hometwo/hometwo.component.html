@@ -1,0 +1,81 @@
+<!--<div class="container">
+    <form >
+        <div class="form-group">
+    <span><input type="search" name="search"class="form-control" placeholder="Search for an artist" [(ngModel)]="searchQuery" (keyup)="searchArtists()">
+    </span>
+    </div>
+    </form>
+    </div>-
+
+
+
+
+<div class="container">
+    <div class="card w-100 mt-5"style="max-width:100%;" >
+
+    <div class="row " *ngFor="let artist of artists">
+      <div class="col-md-4">
+    
+                <img [src]="artist.images[0].url" class="img mt-5" height="300px" width="100%"alt="">
+</div>
+<div class="col-md-8">
+                <div class="card-body">
+                  <div class="card-header">
+                    <h2>{{artist.name}}</h2>
+                  </div>
+<a routerLink="/artists/{{artist.id}}">{{artist.name}}</a>         
+     <p>Followers: {{artist.followers.total | number}}</p>
+</div>
+             -- <p>Genres: <span class="badge badge-success mr-2" *ngFor="let genre of artist.genres">{{genre}}</span></p>--
+      
+              </div>
+
+      </div>
+    </div>
+    </div>>j->--
+
+    
+    <div class="top">
+      <div class="Arrowleft bg-black login-bar d-flex px-3 align-items-center">
+      <img src="https://img.icons8.com/ios-glyphs/18/000000/chevron-left.png"/>
+        
+      </div>
+      <nav class="navbar navbar-light w-100 " style="background-color:#FFFEFE;" ></nav>
+      </div>
+      <div class="login-otp-form mt-4">
+      
+        <p class="otp-text">
+          An OTP has been sent to +91{number}
+        </p>
+    
+        <div class="inputOtp justify-content-center m-2 d-flex flex-row">
+                 
+                   
+                     <input class="inputBox m-2 p-1 text-center form-control rounded-0" name="otp" 
+                      style="width:35;border-bottom:#918E8E;"
+                       type="text"  > 
+                     
+               
+        </div>--
+    
+        <div class="d-flex otp-actions justify-content-between mt-1">
+          <p
+            class="editText text-center">
+            Edit mobile number
+          </p>
+        </div>
+        <div class="mt-2 text-center ml-4 mr-4">
+          
+           
+         
+            <div class="b1">
+         
+            <button type="submit"    class="btn text-white d-block mx-auto w-100 m-5">VERIFY</button>
+          </div>
+            
+          
+           
+        </div>
+      </div>-->
+    
+   

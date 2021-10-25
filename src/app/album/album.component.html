@@ -1,0 +1,38 @@
+<section>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col">
+                <div class="card bg-dark ">
+                    <div class="card-header  text-white">
+<div class="row align-items-center">
+    <div class="col-md-3">
+        <img [src]="album.images[0].url" class="img-fluid img-thumbnail" alt="">
+    </div>
+    <div class="col-md-9">
+        <h5 style="color:black;"class="display-4 text-white">{{album.name}}</h5>
+        <p class="h3 text-white">Release date: {{album.release_date | date }}</p>
+        
+        
+        <button class="btn btn-outline-white btn-sm" (click)="backToArtists()">Back</button>
+    </div>
+</div>
+                    </div>
+                    </div>
+                    <div class="card-body">
+<div class="row" *ngFor="let track of tracks ">
+    <div class="col" >
+        <div class="card  mt-3"style="background-color:black;">
+            <div class="card-body  text-dark ">
+                <p class="lead text-white">{{track.name}}</p>
+                <audio controls class="w-100 " >
+                    <source [src]="track.preview_url">
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
